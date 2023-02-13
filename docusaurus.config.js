@@ -38,6 +38,12 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: 'v2.0',
+            },
+          },
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -64,6 +70,7 @@ const config = {
       // Replace with your project's social card
       image: 'https://opengraph.githubassets.com/6c51a4f5d86f9960ae2b4c8ad85fc3f53bfc22b91d73beec9cf482f315608f9a/Jersyfi/react-cookify',
       navbar: {
+        hideOnScroll: true,
         title: 'Cookify',
         logo: {
           alt: 'Cookify Logo',
@@ -76,19 +83,15 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          /*{
-            to: '/blog',
-            label: 'Blog',
-            position: 'left'
-          },*/
           {
             type: 'docsVersionDropdown',
             position: 'right',
           },
           {
             href: 'https://github.com/jersyfi/cookify-docs',
-            label: 'GitHub',
             position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
           },
         ],
       },
@@ -121,10 +124,6 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
                 href: 'https://github.com/facebook/docusaurus',
               },
@@ -135,7 +134,7 @@ const config = {
           <div>
               <p style="margin-bottom: 0.5rem; font-size: .875rem; line-height: 1.25rem;">©${new Date().getFullYear()} Jersyfi</p>
               <a href="https://jersyfi.de">
-                <img alt="Jersyfi Schriftzug" src="/img/JERSYFI.svg" width="128" height="32" decoding="async" data-nimg="1" loading="lazy" style="{"height: 2rem"/>
+                <img alt="Jersyfi Schriftzug" src="/img/JERSYFI.svg" width="128" height="32" decoding="async" data-nimg="1" loading="lazy" style="height: 2rem"/>
               </a>
           </div>
         `,

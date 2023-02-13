@@ -1,0 +1,48 @@
+name: Deploy to IONOS
+run-name: "Deploy to IONOS: Build Cookify Docs · ${{ github.event.head_commit.message || format('Triggered by {0}', github.triggering_actor) }}"
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npm run build
+
+  web-deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+
+      - name: ⚙️ Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+        
+      - name: 🔨 Build Project
+        run: |
+          npm ci
+          npm run build
+
+      - name: 📂 Sync files
+        uses: wangyucode/sftp-upload-action@v1.4.8
+        with:
+          remoteDir: jersyfi.dev/cookify/
+          localDir: ./build/
+          host: ${{ secrets.IONOS_FTP_SERVER }}
+          username: ${{ secrets.IONOS_FTP_USER }}
+          password: ${{ secrets.IONOS_FTP_PASSWORD }}
+          dryRun: false
+          forceUpload: true
+          removeExtraFilesOnServer: true
