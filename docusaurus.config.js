@@ -76,11 +76,11 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {
+          /*{
             to: '/blog',
             label: 'Blog',
             position: 'left'
-          },
+          },*/
           {
             type: 'docsVersionDropdown',
             position: 'right',
@@ -131,7 +131,14 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `
+          <div>
+              <p style="margin-bottom: 0.5rem; font-size: .875rem; line-height: 1.25rem;">©${new Date().getFullYear()} Jersyfi</p>
+              <a href="https://jersyfi.de">
+                <img alt="Jersyfi Schriftzug" src="/img/JERSYFI.svg" width="128" height="32" decoding="async" data-nimg="1" loading="lazy" style="{"height: 2rem"/>
+              </a>
+          </div>
+        `,
       },
       prism: {
         theme: lightCodeTheme,
