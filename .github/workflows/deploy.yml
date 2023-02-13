@@ -38,7 +38,7 @@ jobs:
       - name: 📂 Sync files
         uses: wangyucode/sftp-upload-action@v1.4.8
         with:
-          remoteDir: jersyfi.dev/cookify/
+          remoteDir: test/
           localDir: ./build/
           host: ${{ secrets.IONOS_FTP_SERVER }}
           username: ${{ secrets.IONOS_FTP_USER }}
