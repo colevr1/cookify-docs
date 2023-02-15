@@ -5,6 +5,22 @@ import styles from './index.module.css';
 export default function HomepageFeatures(): JSX.Element {
   return (
     <>
+      <section className={clsx('padding-vert--md', styles.playgroundBackground)}>
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <div className={styles.builtWith}>
+                <img src="/img/frameworks/vanilla-js.svg" width={80} height={80} />
+                <img src="/img/frameworks/react.svg" width={80} height={80} />
+                <img className={styles.builtWithPlanned} src="/img/frameworks/vue-js.svg" width={80} height={80} />
+                <img className={styles.builtWithPlanned} src="/img/frameworks/svelte.svg" width={80} height={80} />
+                <img className={styles.builtWithPlanned} src="/img/frameworks/laravel.svg" width={80} height={80} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="padding-vert--xl">
         <div className="container">
           <div className="row">

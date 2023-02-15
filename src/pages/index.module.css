@@ -21,3 +21,13 @@
   align-items: center;
   justify-content: center;
 }
+
+.builtWith {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: fit-content;
+  gap: 2rem;
+  margin: 0 auto;
+  margin-bottom: calc(1.25*1rem);
+}

@@ -4,7 +4,7 @@ title: Installation
 description: How to install Cookify
 sidebar_position: 1
 tags:
-  - Getting started
+  - Advanced Guide
   - Installation
 ---
 
@@ -15,7 +15,7 @@ react-cookify is essentially a set of npm packages.
 For that install `react-cookify` via npm.
 
 ```bash
-npm install react-cookify@v1.0.0
+npm install react-cookify
 ```
 
 ## Add CookifyProvider

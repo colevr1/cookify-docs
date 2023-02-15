@@ -1,3 +1,18 @@
+/* Built with */
+.builtWith {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: fit-content;
+  gap: 2rem;
+}
+
+.builtWithPlanned {
+  filter: saturate(0);
+}
+
+/* Playground */
 .playgroundBackground {
   background-color: var(--ifm-table-stripe-background);
 }
