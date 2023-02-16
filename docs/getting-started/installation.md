@@ -28,7 +28,7 @@ import { CookifyProvider } from 'react-cookify'
 
 export default function App({ Component, pageProps }) {
     return (
-        <CookifyConsent options={/*options*/}>
+        <CookifyConsent settings={/*options*/}>
             <Component {...pageProps} />
         </CookifyProvider>
     )

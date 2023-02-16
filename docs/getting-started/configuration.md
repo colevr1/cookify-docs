@@ -8,7 +8,7 @@ tags:
   - Configuration
 ---
 
-## Available Options
+## Available Settings
 
 All configuration settings with its default values. The options are part of the Core functions of Cookify and need to be checked out in [Advanced Guide (Core)](../advanced-guide/configuration).
 
