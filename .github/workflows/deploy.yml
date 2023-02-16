@@ -9,7 +9,6 @@ on:
 
 jobs:
   web-deploy:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
