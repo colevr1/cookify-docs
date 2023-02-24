@@ -24,7 +24,7 @@ Now you need to add `CookifyConsent` to your App.
 
 ```javascript
 import '../styles/globals.css'
-import { CookifyProvider } from 'react-cookify'
+import { CookifyConsent } from 'react-cookify'
 
 export default function App({ Component, pageProps }) {
     return (
