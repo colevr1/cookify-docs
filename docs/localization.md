@@ -2,7 +2,7 @@
 id: localization
 title: Localization
 description: How to localize cookify
-sidebar_position: 5
+sidebar_position: 6
 tags:
   - Localization
 ---
