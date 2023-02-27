@@ -35,7 +35,7 @@ const config = {
     [
       '@docusaurus/preset-classic',
       ({
-        docs: {
+        /*docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/jersyfi/cookify-docs/tree/main/',
           lastVersion: 'current',
@@ -48,7 +48,7 @@ const config = {
               banner: 'unmaintained',
             }
           },
-        },
+        },*/
         blog: {
           showReadingTime: true,
           editUrl: 'https://github.com/jersyfi/cookify-docs/tree/main/',
@@ -60,28 +60,112 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs-react',
+        path: 'docs-react',
+        editUrl: 'https://github.com/jersyfi/cookify-docs/tree/main/',
+        routeBasePath: 'docs-react',
+        sidebarPath: require.resolve('./docs-react_sidebars.js'),
+        lastVersion: 'current',
+        versions: {
+          current: {
+            label: 'v2.0',
+            banner: 'none',
+          },
+          '1.0': {
+            label: 'v1.0',
+            banner: 'unmaintained',
+          },
+        },
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs-js',
+        path: 'docs-js',
+        editUrl: 'https://github.com/jersyfi/cookify-docs/tree/main/',
+        routeBasePath: 'docs-js',
+        sidebarPath: require.resolve('./docs-js_sidebars.js'),
+        lastVersion: 'current',
+        versions: {
+          current: {
+            label: 'v3.1',
+          },
+        },
+      },
+    ],
+  ],
+
   themeConfig:
     ({
       // Replace with your project's social card
       image: 'https://opengraph.githubassets.com/6c51a4f5d86f9960ae2b4c8ad85fc3f53bfc22b91d73beec9cf482f315608f9a/Jersyfi/react-cookify',
       navbar: {
-        hideOnScroll: true,
+        //hideOnScroll: true,
         title: 'Cookify',
         logo: {
           alt: 'Cookify Logo',
           src: 'img/logo.svg',
         },
         items: [
-          {
+          /*{
             type: 'doc',
             docId: 'intro',
             position: 'left',
             label: 'Docs',
+          },*/
+          {
+            type: 'dropdown',
+            label: 'Docs',
+            position: 'left',
+            items: [
+              {
+                type: 'doc',
+                docId: 'intro',
+                docsPluginId: 'docs-react',
+                label: 'React',
+              },
+              {
+                type: 'doc',
+                docId: 'intro',
+                docsPluginId: 'docs-js',
+                label: 'Vanilla JS',
+              },
+            ]
+          },
+          {
+            type: 'html',
+            position: 'left',
+            value: '<button>Test</button>',
+          },
+          {
+            type: 'localeDropdown',
+            position: 'right',
           },
           {
             type: 'docsVersionDropdown',
+            docsPluginId: 'docs-react',
+            //dropdownActiveClassDisabled: true,
+            //dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
             position: 'right',
+            label: 'Test',
           },
+          {
+            type: 'docsVersionDropdown',
+            docsPluginId: 'docs-js',
+            //dropdownActiveClassDisabled: true,
+            //dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
+            position: 'right',
+            label: 'Test',
+          },
+          /*{
+            type: 'search',
+            position: 'right',
+          },*/
           {
             href: 'https://github.com/jersyfi/cookify-docs',
             position: 'right',
@@ -97,8 +181,12 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'React',
+                to: '/docs-react/intro',
+              },
+              {
+                label: 'Vanilla JS',
+                to: '/docs-js/intro',
               },
             ],
           },
