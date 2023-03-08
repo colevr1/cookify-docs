@@ -2,10 +2,17 @@
 .builtWith {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0 auto;
-  width: fit-content;
+  width: auto;
   gap: 2rem;
+}
+
+@media (max-width: 996px) {
+  .builtWith {
+    justify-content: center;
+    width: auto;
+  }
 }
 
 .builtWithPlanned {

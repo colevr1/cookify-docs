@@ -41,8 +41,6 @@ export default function HomepageFeatures(): JSX.Element {
             <div className="col">
               <h2>Playground</h2>
               <p>Under construction 🏗️</p>
-
-              <p>View and test how Cookify works in either <a href="https://jersyfi.github.io/cookify/test/preview/bootstrap.html">Bootstrap</a> or <a href="https://jersyfi.github.io/cookify/test/preview/tailwindcss.html">Tailwind CSS.</a></p>
               
               <h3>Themes</h3>
               <div className={styles.themes}>

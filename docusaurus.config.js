@@ -62,7 +62,8 @@ const config = {
 
   plugins: [
     [
-      '@docusaurus/plugin-content-docs',
+      //'@docusaurus/plugin-content-docs',
+      './package/plugin-content-docs',
       {
         id: 'docs-react',
         path: 'docs-react',
@@ -83,7 +84,8 @@ const config = {
       },
     ],
     [
-      '@docusaurus/plugin-content-docs',
+      //'@docusaurus/plugin-content-docs',
+      './package/plugin-content-docs',
       {
         id: 'docs-js',
         path: 'docs-js',
@@ -100,10 +102,63 @@ const config = {
     ],
   ],
 
+  /*plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs-react',
+        path: 'multidocs/react/docs',
+        versionPath: 'multidocs/react',
+        versionPrefix: false,
+        editUrl: 'https://github.com/jersyfi/cookify-docs/tree/main/',
+        routeBasePath: 'docs-react',
+        sidebarPath: require.resolve('./multidocs/react/sidebars.js'),
+        lastVersion: 'current',
+        versions: {
+          current: {
+            label: 'v2.0',
+            banner: 'none',
+          },
+          '1.0': {
+            label: 'v1.0',
+            banner: 'unmaintained',
+          },
+        },
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      './package/plugin-content-multidocs',
+      {
+        id: 'docs-js',
+        path: 'multidocs/vanillajs/docs',
+        versionPath: 'multidocs/vanillajs',
+        versionPrefix: false,
+        editUrl: 'https://github.com/jersyfi/cookify-docs/tree/main/',
+        routeBasePath: 'docs-js',
+        sidebarPath: require.resolve('./multidocs/vanillajs/sidebars.js'),
+        lastVersion: 'current',
+        versions: {
+          current: {
+            label: 'v3.1',
+          },
+        },
+      },
+    ],
+  ],*/
+
   themeConfig:
     ({
       // Replace with your project's social card
       image: 'https://opengraph.githubassets.com/6c51a4f5d86f9960ae2b4c8ad85fc3f53bfc22b91d73beec9cf482f315608f9a/Jersyfi/react-cookify',
+      announcementBar: {
+        id: 'under_construction',
+        content:
+          '🚧 This documentation is still under construction 🏗️',
+        backgroundColor: 'repeating-linear-gradient(35deg,var(#000000),var(#000000) 20px,var(#ffffff) 10px,var(#ffffff) 40px)',
+        textColor: '#091E42',
+        isCloseable: false,
+      },
       navbar: {
         //hideOnScroll: true,
         title: 'Cookify',
@@ -118,7 +173,7 @@ const config = {
             position: 'left',
             label: 'Docs',
           },*/
-          {
+          /*{
             type: 'dropdown',
             label: 'Docs',
             position: 'left',
@@ -136,16 +191,68 @@ const config = {
                 label: 'Vanilla JS',
               },
             ]
-          },
+          },*/
           {
-            type: 'html',
+            type: 'dropdown',
+            label: 'Docs',
             position: 'left',
-            value: '<button>Test</button>',
+            items: [
+              {
+                type: 'html',
+                value: `
+                  <div class="dropdown-docs">
+                    <div class="box">
+                      <h3>Framework</h3>
+                      <div class="items-list">
+                        <div class="item">
+                          <a href="/docs-js/intro">
+                            <img alt="Vanilla JS" src="/img/frameworks/vanilla-js.svg" width="24" height="24" decoding="async" data-nimg="1" loading="lazy"/>
+                            <p>Vanilla JS</p>
+                            <span>v3.1</span>
+                          </a>
+                        </div>
+                        <div class="item">
+                          <a href="/docs-react/intro">
+                            <img alt="React" src="/img/frameworks/react.svg" width="24" height="24" decoding="async" data-nimg="1" loading="lazy"/>
+                            <p>React</p>
+                            <span>v2.0</span>
+                          </a>
+                        </div>
+                        <div class="item planned">
+                            <img alt="Vue.js" src="/img/frameworks/vue-js.svg" width="24" height="24" decoding="async" data-nimg="1" loading="lazy"/>
+                            <p>Vue.js</p>
+                            <span>Planned 🚧</span>
+                        </div>
+                        <div class="item planned">
+                            <img alt="Svelte" src="/img/frameworks/svelte.svg" width="24" height="24" decoding="async" data-nimg="1" loading="lazy"/>
+                            <p>Svelte</p>
+                            <span>Planned 🚧</span>
+                        </div>
+                        <div class="item planned">
+                            <img alt="Laravel" src="/img/frameworks/laravel.svg" width="24" height="24" decoding="async" data-nimg="1" loading="lazy"/>
+                            <p>Laravel</p>
+                            <span>Planned 🚧</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="box">
+                      <h3>Core</h3>
+                      <div class="item planned">
+                        <img alt="Vanilla JS" src="/img/frameworks/vanilla-js.svg" width="24" height="24" decoding="async" data-nimg="1" loading="lazy"/>
+                        <p>Vanilla JS</p>
+                        <span>Planned 🚧</span>
+                      </div>
+                    </div>
+                  </div>
+                `,
+              },
+            ]
           },
-          {
+          /*{
             type: 'localeDropdown',
             position: 'right',
-          },
+          },*/
           {
             type: 'docsVersionDropdown',
             docsPluginId: 'docs-react',
