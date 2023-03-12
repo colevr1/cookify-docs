@@ -56,6 +56,14 @@ div[class^=announcementBar_] {
   width: max-content;
 }
 
+@media (max-width: 996px) {
+  .dropdown-docs {
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
 .dropdown-docs h3 {
   font-size: .875rem;
   line-height: 1.25rem;

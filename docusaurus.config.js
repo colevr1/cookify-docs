@@ -151,6 +151,7 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'https://opengraph.githubassets.com/6c51a4f5d86f9960ae2b4c8ad85fc3f53bfc22b91d73beec9cf482f315608f9a/Jersyfi/react-cookify',
+      //metadata: [{name: 'twitter:card', content: 'summary'}],
       announcementBar: {
         id: 'under_construction',
         content:
@@ -160,38 +161,12 @@ const config = {
         isCloseable: false,
       },
       navbar: {
-        //hideOnScroll: true,
         title: 'Cookify',
         logo: {
           alt: 'Cookify Logo',
           src: 'img/logo.svg',
         },
         items: [
-          /*{
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Docs',
-          },*/
-          /*{
-            type: 'dropdown',
-            label: 'Docs',
-            position: 'left',
-            items: [
-              {
-                type: 'doc',
-                docId: 'intro',
-                docsPluginId: 'docs-react',
-                label: 'React',
-              },
-              {
-                type: 'doc',
-                docId: 'intro',
-                docsPluginId: 'docs-js',
-                label: 'Vanilla JS',
-              },
-            ]
-          },*/
           {
             type: 'dropdown',
             label: 'Docs',
