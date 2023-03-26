@@ -12,12 +12,12 @@ This project is for the documentation of the cookify frameworks.
 
 ## Integrated Cookify Projects
 
-| Frameworks        | Integrated |
-| :---              | :---: |
-| Vanilla JS        | 🏗️ |
-| React             | ✅ |
-| Svelte (planned)  | ❌ |
-| Laravel (planned) | ❌ |
+| Frameworks        | Integrated | Versions |
+| :---              | :---: | :---: |
+| Vanilla JS        | ✅ | v3.1 |
+| React             | ✅ | v2.1, v1.0 |
+| Svelte (planned)  | ❌ | ❌ |
+| Laravel (planned) | ❌ | ❌ |
 
 ## Commands
 

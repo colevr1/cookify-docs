@@ -73,7 +73,7 @@ const config = {
         lastVersion: 'current',
         versions: {
           current: {
-            label: 'v2.0',
+            label: 'v2.1',
             banner: 'none',
           },
           '1.0': {
@@ -190,7 +190,7 @@ const config = {
                           <a href="/docs-react/intro">
                             <img alt="React" src="/img/frameworks/react.svg" width="24" height="24" decoding="async" data-nimg="1" loading="lazy"/>
                             <p>React</p>
-                            <span>v2.0</span>
+                            <span>v2.1</span>
                           </a>
                         </div>
                         <div class="item planned">
@@ -228,22 +228,6 @@ const config = {
             type: 'localeDropdown',
             position: 'right',
           },*/
-          {
-            type: 'docsVersionDropdown',
-            docsPluginId: 'docs-react',
-            //dropdownActiveClassDisabled: true,
-            //dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
-            position: 'right',
-            label: 'Test',
-          },
-          {
-            type: 'docsVersionDropdown',
-            docsPluginId: 'docs-js',
-            //dropdownActiveClassDisabled: true,
-            //dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
-            position: 'right',
-            label: 'Test',
-          },
           /*{
             type: 'search',
             position: 'right',
