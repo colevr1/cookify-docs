@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }) {
     return (
         <CookifyConsent settings={/*options*/}>
             <Component {...pageProps} />
-        </CookifyProvider>
+        </CookifyConsent>
     )
 }
 ```
